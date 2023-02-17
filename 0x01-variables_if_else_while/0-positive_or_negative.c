@@ -3,9 +3,7 @@
 #include <time.h>
 /* more headers goes there */
 
-/* betty style 
- * doc for function 
- * main goes there */
+/* This program will assign a random number to the variable n each time it is executed. */
 int main(void)
 {
 	int n;
