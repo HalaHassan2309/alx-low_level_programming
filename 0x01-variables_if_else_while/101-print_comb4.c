@@ -1,5 +1,5 @@
 /*
- * File: 101-print_comb4.c
+ * File: 101-print_comb4.ic
  */
 
 #include <stdio.h>
@@ -26,7 +26,7 @@ int main(void)
 
 				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
 					continue;
-				
+
 				putchar(',');
 				putchar(' ');
 			}
