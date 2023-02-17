@@ -3,7 +3,10 @@
 #include <time.h>
 /* more headers goes there */
 
-/* This program will assign a random number to the variable n */
+/*
+ * File: 1-last_digit.c
+ * Auth: Brennan D Baraban
+ */
 int main(void)
 {
 	int n, i;
