@@ -1,15 +1,15 @@
 #include "main.h"
 /**
  * print_times_table -  a function that prints the 9 times table
- * rone = row, cone = column, d = current result, n =input
+ * rone = row, cone = column, d = current result, @n = input
  * Return: times table
  * add extra space past single digit
  */
 void print_times_table(int n)
 {
 	int rone, cone, d;
-	
-	if (n < 15 && n > 0)
+
+	if (n < 15 && n >= 0)
 	{
 		for (rone = 0; rone <= n; rone++)
 		{
@@ -40,9 +40,5 @@ void print_times_table(int n)
 			_putchar('\n');
 		}
 
-	} else
-	{
-		_putchar('0');
-		_putchar(' ');
 	}
 }
