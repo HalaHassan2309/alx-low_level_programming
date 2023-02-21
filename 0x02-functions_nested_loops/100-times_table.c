@@ -9,7 +9,7 @@ void print_times_table(int n)
 {
 	int rone, cone, d;
 
-	if (n < 15 && n >= 0)
+	if (n < 15 && n > 0)
 	{
 		for (rone = 0; rone <= n; rone++)
 		{
@@ -40,5 +40,9 @@ void print_times_table(int n)
 			_putchar('\n');
 		}
 
+	} else if (n == 0)
+	{
+		_putchar('0');
+		_putchar(' ');
 	}
 }
