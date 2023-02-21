@@ -33,7 +33,9 @@ int main(void)
 		}
 		printf("%lu%lu", h1, h2);
 		if (inc != 98)
-			printf(", ");		
+		{
+			printf(", ");
+		}
 		n1_h1 = n2_h1;
 		n1_h2 = n2_h2;
 		n2_h1 = h1;
