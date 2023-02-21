@@ -1,32 +1,31 @@
 #include <stdio.h>
 /**
-*printFibonacciNumbers - print first 98
-*fibonacci suit numbers
-*Return: return 0
-*/
-void printFibonacciNumbers(int n)
-{
-    int f1 = 0, f2 = 1, i, next;
-  
-    if (n < 1)
-        return;
-    printf("%d ", f1);
-    for (i = 1; i < n; i++) {
-        printf("%d ", f2);	
-	next = f1 + f2;
-        f1 = f2;
-        f2 = next;
-    }
-}
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
-
-/**
-*main - prints out first 98
-*fibonacci suit numbers
-*Return: return 0
-*/
 int main()
 {
-    printFibonacciNumbers(98);
-    return 0;
+
+  int n = 98, i;
+
+  // initialize first and second terms
+  int t1 = 1, t2 = 2;
+
+  // initialize the next term (3rd term)
+  int nextTerm = t1 + t2
+
+  // print the first two terms t1 and t2
+  printf("Fibonacci Series: %d, %d, ", t1, t2);
+
+  // print 3rd to nth terms
+  for (i = 3; i <= n; ++i) {
+    printf("%d, ", nextTerm);
+    t1 = t2;
+    t2 = nextTerm;
+    nextTerm = t1 + t2;
+  }
+
+  return 0;
 }
