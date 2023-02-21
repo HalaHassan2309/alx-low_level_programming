@@ -13,7 +13,9 @@ void printFibonacciNumbers(int n)
     printf("%d ", f1);
     for (i = 1; i < n; i++) {
         printf("%d ", f2);
-        int next = f1 + f2;
+        int next;
+	
+	next = f1 + f2;
         f1 = f2;
         f2 = next;
     }
