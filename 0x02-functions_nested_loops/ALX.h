@@ -1,5 +1,5 @@
-#ifndef ALXLOOPS
-#define ALXLOOPS
+#ifndef ALXLOOPS_H
+#define ALXLOOPS_H
 
 char _putchar(char c);
 void print_alphabet(void);
