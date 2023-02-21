@@ -8,34 +8,39 @@
 void print_times_table(int n)
 {
 	int rone, cone, d;
-
-	for (rone = 0; rone <= n; rone++)
+	if (n < 15 && n > 0)
 	{
-		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-		for (cone = 1; cone <= n; cone++)
+		for (rone = 0; rone <= n; rone++)
 		{
-			d = (rone * cone);
-			if ((d / 10) > 0)
+			_putchar('0');
+			_putchar(',');
+			_putchar(' ');
+			_putchar(' ');
+			for (cone = 1; cone <= n; cone++)
 			{
-				_putchar((d / 10) + '0');
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar(' ');
-			}
-			_putchar((d % 10) + '0');
+				d = (rone * cone);
+				if ((d / 10) > 0)
+				{
+					_putchar((d / 10) + '0');
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
+				_putchar((d % 10) + '0');
 
-			if (cone < n)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
+				if (cone < n)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
 			}
+			_putchar('\n');
 		}
-		_putchar('\n');
-	}
 
+	}
 }
