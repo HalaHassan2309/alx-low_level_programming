@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - a function that prints the alphabet ten times
+ * _islower - return 1 if c is lowercase
  *
  * Return: Always 0 (Succes)
  */
@@ -10,7 +10,7 @@ int _islower(int c)
 	if (c >= 'a' || c <= 'z')
 	{
 		return (1);
-	} else 
+	} else
 	{
 		return (0);
 	}
