@@ -20,6 +20,7 @@ void print_times_table(int n)
 			if ((d / 10) > 0)
 			{
 				_putchar((d / 10) + '0');
+				_putchar(' ');
 			}
 			else
 			{
