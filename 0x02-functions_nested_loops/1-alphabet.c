@@ -1,3 +1,9 @@
+#include "ALX.h"
+/**
+ * add - a function that adds two integers and returns the result
+ * 
+ * Return: alphabet
+ */
 void print_alphabet(void)
 {
 	int n;
