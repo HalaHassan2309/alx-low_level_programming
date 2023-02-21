@@ -8,9 +8,9 @@
 int main()
 {
 
-  int n = 98, i;
-  int t1 = 1, t2 = 2;
-  int nextTerm = t1 + t2;
+  unsigned long n = 98, i;
+  unsigned long t1 = 1, t2 = 2;
+  unsigned long nextTerm = t1 + t2;
 
   printf("%lu, %lu, ", t1, t2);
   for (i = 3; i <= n; ++i) {
