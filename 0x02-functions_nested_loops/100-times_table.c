@@ -1,49 +1,51 @@
 #include "main.h"
+
 /**
- * print_times_table -  a function that prints the 9 times table
- * rone = row, cone = column, d = current result
- * @n = input
- * Return: times table
- * add extra space past single digit
- */
+  * print_times_table - Prints a multiplication table up to param
+  * @n: The number to be treated
+  *
+  * Return: Number matrix
+  */
 void print_times_table(int n)
 {
-	int rone, cone, d;
+	int x, y, z;
 
-	if (n < 15 && n > 0)
+	if (n >= 0 && n <= 14)
 	{
-		for (rone = 0; rone <= n; rone++)
+		for (x = 0; x <= n; x++)
 		{
-			_putchar('0');
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
-			for (cone = 1; cone <= n; cone++)
+			for (y = 0; y <= n; y++)
 			{
-				d = (rone * cone);
-				if ((d / 10) > 0)
+				z = x * y;
+				if (z > 99)
 				{
-					_putchar((d / 10) + '0');
+					_putchar(',');
+					_putchar(32);
+					_putchar((z / 100) + '0');
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
+				}
+				else if (z > 9)
+				{
+					_putchar(',');
+					_putchar(32);
+					_putchar(32);
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
 				}
 				else
 				{
-					_putchar(' ');
-				}
-				_putchar((d % 10) + '0');
-
-				if (cone < n)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
+					if (y != 0)
+					{
+						_putchar(',');
+						_putchar(32);
+						_putchar(32);
+						_putchar(32);
+					}
+					_putchar(z + '0');
 				}
 			}
 			_putchar('\n');
 		}
-
-	} else if (n == 0)
-	{
-		_putchar('0');
-		_putchar(' ');
 	}
 }
