@@ -2,10 +2,11 @@
 
 /**
  * mul - a function that checks for uppercase character
- * @a, @b: input
+ * @a: input
+ * @b: input
  * Return: mul of a & b
  */
 int mul(int a, int b)
 {
-	return (a*b);
+	return (a * b);
 }
