@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_more_numbers - a function that prints the numbers, from 0 to 9
+ * more_numbers - a function that prints the numbers, from 0 to 9
  *
  * Return: 0-9 followed by newline
  */
-void print_more_numbers(void)
+void more_numbers(void)
 {
 	int i, j;
 
