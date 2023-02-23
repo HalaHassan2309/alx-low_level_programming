@@ -13,7 +13,8 @@ void print_numbers(void)
 	{
 		if ((i == 2) || (i ==4))
 			continue;
-		_putchar(i + '0');
+		else
+			_putchar(i + '0');
 	}
 	_putchar('\n');
 }
