@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
  * main - a function that prints the numbers, from 0 to 9
  *
@@ -8,7 +10,8 @@
 int main ()
 {
 	int i;
-	for (i = 1; i<=100; i++)
+
+	for (i = 1; i <= 100; i++)
 	{
 		if ((i % 15) == 0)
 			printf("FizzBuzz ");
