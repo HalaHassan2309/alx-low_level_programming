@@ -34,4 +34,5 @@ char *cap_string(char *str)
 				trigger = 0;
 		}
 	}
-	return (str); }
+	return (str);
+}
