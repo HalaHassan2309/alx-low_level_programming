@@ -21,6 +21,7 @@ char *cap_string(char *str)
                         if (nots[c] == str[i])
                                 trigger = 1;
                 }
+                
                 if (trigger)
                 {
                         if (str[i] > 96 && str[i] < 123)
@@ -34,4 +35,5 @@ char *cap_string(char *str)
                                 trigger = 0;
                 }
         }
-        return (str); }
+        return (str);
+}
