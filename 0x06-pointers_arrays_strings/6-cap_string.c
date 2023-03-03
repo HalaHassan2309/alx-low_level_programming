@@ -19,7 +19,7 @@ for (c = 0; nots[c] != '\0'; c++)
 {
 if (nots[c] == str[i])
 trigger = 1;
-}                
+}    
 if (trigger)
 {
 if (str[i] > 96 && str[i] < 123)
