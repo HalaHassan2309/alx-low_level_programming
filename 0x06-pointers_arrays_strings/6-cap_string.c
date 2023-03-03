@@ -10,7 +10,7 @@ char *cap_string(char *str)
 {
 int i, c;
 int trigger;
-char nots[] = ",;.!?(){}\n\t\" ";	
+char nots[] = ",;.!?(){}\n\t\" ";
 for (i = 0, trigger = 0; str[i] != '\0'; i++)
 {
 if (str[0] > 96 && str[0] < 123)
@@ -19,7 +19,11 @@ for (c = 0; nots[c] != '\0'; c++)
 {
 if (nots[c] == str[i])
 trigger = 1;
+<<<<<<< HEAD
 }    
+=======
+}
+>>>>>>> 981217ef11ff9f70ec4852ff68f0eaba3d789a57
 if (trigger)
 {
 if (str[i] > 96 && str[i] < 123)
