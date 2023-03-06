@@ -22,5 +22,4 @@ void print_diagsums(int *a, int size)
 		sum1 += a[(size * (i + 1)) - (i + 1)];
 	}
 
-	printf("%d, %d\n", sum, sum1);
-    }
+	printf("%d, %d\n", sum, sum1); }
