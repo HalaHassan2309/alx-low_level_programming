@@ -1,4 +1,4 @@
-[200~#include "main.h"
+#include "main.h"
 
 /**
  *  * set_string - sets pointer val to char
