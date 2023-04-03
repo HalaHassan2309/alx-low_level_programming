@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * pop_listint - delete head node 
+ * pop_listint - delete head node
  * @head: pointer to the first element
  *
  * Return: the data inside the elements
@@ -19,5 +19,4 @@ int pop_listint(listint_t **head)
 	free(*head);
 	*head = temp_node;
 
-	return (n);
-}
+	return (n); }
