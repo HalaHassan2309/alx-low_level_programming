@@ -17,11 +17,12 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		temp_node = temp_node->next;
 		i++;
 	}
-
+	
 	if (temp_node)
-    {
-        return(temp_node);
-    } else {
-        return NULL;
-    }
+	{
+		return (temp_node);
+	} else
+	{
+		return NULL;
+	}
 }
