@@ -10,12 +10,16 @@ size_t print_listint_safe(const listint_t *head)
 {
 	size_t len = 0;
 
-	while (head)
-	{
-		printf("[%p] %d\n", (void *)head, head->n);
-		len++;
-		head = head->next;
-	}
+	if(len == 0)
+    {
+        for(; head != NULL; len++)
+        {
+            printf("[%p] %d\n", (void *)head, head->n);
+            head = head->next;
+        }
+    } else
+    {
+    }
     printf("-> [%p] %d\n", (void *)head, head->n);
 	if (!head)
 		exit(98);
