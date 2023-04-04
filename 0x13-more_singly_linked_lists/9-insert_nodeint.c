@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - returns the nth node 
+ * insert_nodeint_at_index - returns the nth node
  * @head: pointer to the head of the list
  * @idx: index of the node to be added
  * @n: content of the new node
@@ -11,12 +11,12 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *h = (*head);
-    listint_t *new = NULL;
+	listint_t *new = NULL;
 	listint_t *previous = NULL;
 	unsigned int i = 0;
-    size_t count = 0;
-
-    while (h != NULL)
+	size_t count = 0;
+	
+	while (h != NULL)
 	{
 		count += 1;
 		h = h->next;
