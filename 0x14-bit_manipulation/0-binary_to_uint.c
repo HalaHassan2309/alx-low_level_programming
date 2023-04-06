@@ -15,13 +15,13 @@ unsigned int binary_to_uint(const char *b)
 	if (b == NULL)
 		return (0);
 
-	while(b[len])
-    {
-		if (b[len] != '1' && b[len] != '0')
-			return (0);
-		else
+	while (b[len])
+	{
+		if (b[len] == '1' || b[len] == '0')
 			len++;
-    }
+		else
+			return (0);
+	}
 
 	len--;
 
