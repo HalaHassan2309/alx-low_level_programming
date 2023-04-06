@@ -9,7 +9,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t num = 0;
-	int d;
+	long int d;
 	listint_t *temp_node;
 
 	if (!h || !*h)
