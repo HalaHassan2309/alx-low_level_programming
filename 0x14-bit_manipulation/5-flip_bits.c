@@ -18,5 +18,4 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 			counter++;
 		flip >>= 1;
 	}
-	return (counter);
-}
+	return (counter); }
