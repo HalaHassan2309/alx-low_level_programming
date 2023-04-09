@@ -1,4 +1,10 @@
 #include "main.h"
+
+/*
+ * File: 100-elf_header.c
+ * 
+ */
+
 /**
  * print_magic - Prints the magic numbers of an ELF header.
  * @elf_ident: A pointer to an array containing the ELF magic numbers.
