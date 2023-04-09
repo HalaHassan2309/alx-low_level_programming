@@ -5,6 +5,17 @@
  * Auth: Hala Hassan
  */
 
+void print_data(unsigned char *elf_ident);
+void print_magic(unsigned char *elf_ident);
+void print_class(unsigned char *elf_ident);
+void print_abi(unsigned char *elf_ident);
+void print_osabi(unsigned char *elf_ident);
+void print_type(unsigned int e_type, unsigned char *elf_ident);
+void print_entry(unsigned long int e_entry, unsigned char *elf_ident);
+void check_elf(unsigned char *elf_ident);
+void print_version(unsigned char *elf_ident);
+void close_elf(int elf);
+
 /**
  * print_magic - Prints the magic numbers of an ELF header.
  * @elf_ident: A pointer to an array containing the ELF magic numbers.
@@ -50,7 +61,6 @@ void check_elf(unsigned char *elf_ident)
 		}
 	}
 }
-
 
 /**
  * print_class - Prints the class of an ELF header.
