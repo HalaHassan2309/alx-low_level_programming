@@ -2,7 +2,7 @@
 
 /*
  * File: 100-elf_header.c
- * 
+ * Auth: Hala Hassan
  */
 
 /**
