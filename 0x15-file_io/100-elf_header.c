@@ -142,5 +142,4 @@ void print_data(unsigned char *elf_ident)
 void print_abi(unsigned char *elf_ident)
 {
 	printf("  ABI Version:                       %d\n",
-	       elf_ident[EI_ABIVERSION]);
-}
+	       elf_ident[EI_ABIVERSION]); }
