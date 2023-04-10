@@ -1,12 +1,12 @@
 /**
  * print_osabi - Prints the OS/ABI of an ELF header.
- * @elf_ident: A pointer to an array containing the ELF version.
+ * @e_ident: A pointer to an array containing the ELF version.
  */
-void print_osabi(unsigned char *elf_ident)
+void print_osabi(unsigned char *e_ident)
 {
 	printf("  OS/ABI:                            ");
 
-	switch (elf_ident[EI_OSABI])
+	switch (e_ident[EI_OSABI])
 	{
 	case ELFOSABI_NONE:
 		printf("UNIX - System V\n");
@@ -39,6 +39,6 @@ void print_osabi(unsigned char *elf_ident)
 		printf("Standalone App\n");
 		break;
 	default:
-		printf("<unknown: %x>\n", elf_ident[EI_OSABI]);
+		printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 	}
 }

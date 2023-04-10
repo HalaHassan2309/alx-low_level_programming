@@ -10,10 +10,10 @@
 #include <elf.h>
 
 void close_elf(int elf);
-void print_type(unsigned int e_type, unsigned char *elf_ident);
-void print_entry(unsigned long int e_entry, unsigned char *elf_ident);
-void print_osabi(unsigned char *elf_ident);
-void check_elf(unsigned char *elf_ident);
-void print_version(unsigned char *elf_ident);
+void print_type(unsigned int e_type, unsigned char *e_ident);
+void print_entry(unsigned long int e_entry, unsigned char *e_ident);
+void print_osabi(unsigned char *e_ident);
+void check_elf(unsigned char *e_ident);
+void print_version(unsigned char *e_ident);
 
 #endif /* ELF_H */

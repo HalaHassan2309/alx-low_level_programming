@@ -1,11 +1,11 @@
 /**
  * print_type - Prints the type of an ELF header.
  * @e_type: The ELF type.
- * @elf_ident: A pointer to an array containing the ELF class.
+ * @e_ident: A pointer to an array containing the ELF class.
  */
-void print_type(unsigned int e_type, unsigned char *elf_ident)
+void print_type(unsigned int e_type, unsigned char *e_ident)
 {
-	if (elf_ident[EI_DATA] == ELFDATA2MSB)
+	if (e_ident[EI_DATA] == ELFDATA2MSB)
 		e_type >>= 8;
 
 	printf("  Type:                              ");

@@ -3,11 +3,11 @@
 
 /**
  * print_magic - Prints the magic numbers of an ELF header.
- * @elf_ident: A pointer to an array containing the ELF magic numbers.
+ * @e_ident: A pointer to an array containing the ELF magic numbers.
  *
  * Description: Magic numbers are separated by spaces.
  */
-void print_magic(unsigned char *elf_ident)
+void print_magic(unsigned char *e_ident)
 {
 	int x;
 
@@ -15,7 +15,7 @@ void print_magic(unsigned char *elf_ident)
 
 	for (x = 0; x < EI_NIDENT; x++)
 	{
-		printf("%02x", elf_ident[x]);
+		printf("%02x", e_ident[x]);
 
 		if (x == EI_NIDENT - 1)
 			printf("\n");
@@ -26,13 +26,13 @@ void print_magic(unsigned char *elf_ident)
 
 /**
  * print_class - Prints the class of an ELF header.
- * @elf_ident: A pointer to an array containing the ELF class.
+ * @e_ident: A pointer to an array containing the ELF class.
  */
-void print_class(unsigned char *elf_ident)
+void print_class(unsigned char *e_ident)
 {
 	printf("  Class:                             ");
 
-	switch (elf_ident[EI_CLASS])
+	switch (e_ident[EI_CLASS])
 	{
 	case ELFCLASSNONE:
 		printf("none\n");
@@ -44,19 +44,19 @@ void print_class(unsigned char *elf_ident)
 		printf("ELF64\n");
 		break;
 	default:
-		printf("<unknown: %x>\n", elf_ident[EI_CLASS]);
+		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
 
 /**
  * print_data - Prints the data of an ELF header.
- * @elf_ident: A pointer to an array containing the ELF class.
+ * @e_ident: A pointer to an array containing the ELF class.
  */
-void print_data(unsigned char *elf_ident)
+void print_data(unsigned char *e_ident)
 {
 	printf("  Data:                              ");
 
-	switch (elf_ident[EI_DATA])
+	switch (e_ident[EI_DATA])
 	{
 	case ELFDATANONE:
 		printf("none\n");
@@ -68,18 +68,18 @@ void print_data(unsigned char *elf_ident)
 		printf("2's complement, big endian\n");
 		break;
 	default:
-		printf("<unknown: %x>\n", elf_ident[EI_CLASS]);
+		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
 
 /**
  * print_abi - Prints the ABI version of an ELF header.
- * @elf_ident: A pointer to an array containing the ELF ABI version.
+ * @e_ident: A pointer to an array containing the ELF ABI version.
  */
-void print_abi(unsigned char *elf_ident)
+void print_abi(unsigned char *e_ident)
 {
 	printf("  ABI Version:                       %d\n",
-	       elf_ident[EI_ABIVERSION]);
+	       e_ident[EI_ABIVERSION]);
 }
 /**
  * main - Displays the information contained in the
@@ -119,16 +119,16 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		exit(98);
 	}
 
-	check_elf(header->elf_ident);
+	check_elf(header->e_ident);
 	printf("ELF Header:\n");
-	print_magic(header->elf_ident);
-	print_class(header->elf_ident);
-	print_data(header->elf_ident);
-	print_version(header->elf_ident);
-	print_osabi(header->elf_ident);
-	print_abi(header->elf_ident);
-	print_type(header->e_type, header->elf_ident);
-	print_entry(header->e_entry, header->elf_ident);
+	print_magic(header->e_ident);
+	print_class(header->e_ident);
+	print_data(header->e_ident);
+	print_version(header->e_ident);
+	print_osabi(header->e_ident);
+	print_abi(header->e_ident);
+	print_type(header->e_type, header->e_ident);
+	print_entry(header->e_entry, header->e_ident);
 
 	free(header);
 	close_elf(fd);
